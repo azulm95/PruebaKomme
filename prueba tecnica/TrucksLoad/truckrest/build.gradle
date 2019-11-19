@@ -1,0 +1,36 @@
+plugins {
+	id 'org.springframework.boot' version '2.2.1.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.8.RELEASE'
+	id 'java'
+	id 'war'
+}
+apply plugin: 'eclipse'
+bootWar {
+    baseName = 'TrucksLoadRest'
+    archiveName 'TrucksLoadRest.war'
+}
+
+sourceCompatibility = '1.8'
+
+ 
+
+
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	compile project(':TruckBussines')
+	compile group: 'org.springframework.boot', name: 'spring-boot-devtools', version: '2.0.4.RELEASE'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-actuator'
+	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
+	testImplementation('org.springframework.boot:spring-boot-starter-test') {
+	exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+	}
+}
+
+test {
+	useJUnitPlatform()
+}

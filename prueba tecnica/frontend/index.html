@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>UploadTrucks</title>
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="Js/UploadTrucks.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <div>
+            <form class="formupload" method="post" enctype="multipart/form-data">
+                <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre">
+                <br>
+                <input  type="email" id="correo" name="correo" placeholder="Escribe tu correo electronico"/>
+                <br>
+                <input type="checkbox" name="titles" id="titles" /> <label for="titles">Titles?</label>
+                <input  type="file" id="archivo" name="archivo"/>
+                <br>
+                <input type="button" value="Subir archivos" onClick="UploadFile();"/>
+                <div id="mensaje"></div>
+            </form>
+            
+        </div>
+    </body>
+</html>

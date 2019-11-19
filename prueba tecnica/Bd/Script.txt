@@ -1,0 +1,12 @@
+Create database truckscompany;
+use truckscompany;
+CREATE TABLE truckscompany.truck (
+  idt INT NOT NULL AUTO_INCREMENT,
+  idtruck VARCHAR(100) NOT NULL,
+  owner VARCHAR(100) NULL,
+  mark VARCHAR(100) NULL,
+  weight BIGINT NULL,
+  numtires BIGINT NULL,
+  datebuy DATE NULL,
+  PRIMARY KEY (idt));
+
